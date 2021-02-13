@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 
 class NavBar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
-  handleToggle = state => {
+  handleToggle = (state) => {
     this.setState({ isOpen: !this.state.isOpen });
   };
   render() {

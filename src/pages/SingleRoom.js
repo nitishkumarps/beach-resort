@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { RoomContext } from "../Context";
 import { Link } from "react-router-dom";
-import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import StyledHero from "../components/StyledHero";
 
@@ -17,7 +15,7 @@ class SingleRoom extends Component {
     //console.log(props);
     this.state = {
       slug: this.props.match.params.slug,
-      defaultBcg: ""
+      defaultBcg: "",
     };
   }
   static contextType = RoomContext;
@@ -43,7 +41,7 @@ class SingleRoom extends Component {
       extras,
       breakfast,
       pets,
-      images
+      images,
     } = room;
     const [mainImg, ...defaultImg] = images;
     return (

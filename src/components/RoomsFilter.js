@@ -8,12 +8,13 @@ import Title from "../components/Title";
  **/
 //get all unique values
 const getUnique = (item, value) => {
-  return [...new Set(item.map(item => item[value]))];
+  return [...new Set(item.map((item) => item[value]))];
 };
 const RoomsFilter = ({ rooms }) => {
   const context = useContext(RoomContext);
   const {
     handleChange,
+    handleDefault,
     type,
     capacity,
     price,
@@ -22,8 +23,12 @@ const RoomsFilter = ({ rooms }) => {
     minSize,
     maxPrice,
     breakfast,
-    pets
+    pets,
   } = context;
+  const handleDefaultClick = (e) => {
+    e.preventDefault();
+    handleDefault();
+  };
   //get unique types
   let types = getUnique(rooms, "type");
   //add all
@@ -38,6 +43,7 @@ const RoomsFilter = ({ rooms }) => {
   });
 
   let people = getUnique(rooms, "capacity");
+  people = people.sort((a, b) => (a > b ? 1 : -1));
   people = people.map((item, index) => {
     return (
       <option value={item} key={index} className="drpclass">
@@ -139,6 +145,16 @@ const RoomsFilter = ({ rooms }) => {
             />
             <label htmlFor="pets">pets</label>
           </div>
+        </div>
+        <div className="form-group">
+          <button
+            className="btn-reset"
+            onClick={(e) => {
+              handleDefaultClick(e);
+            }}
+          >
+            Reset to Default
+          </button>
         </div>
         {/*end of extras*/}
       </form>
