@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Title from "./Title";
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from "react-icons/fa";
 
@@ -15,27 +14,27 @@ class Services extends Component {
         icon: <FaCocktail />,
         title: "free cocktails",
         info:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum."
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum.",
       },
       {
         icon: <FaHiking />,
         title: "endless hiking",
         info:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum."
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum.",
       },
       {
         icon: <FaShuttleVan />,
         title: "free shuttle",
         info:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum."
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum.",
       },
       {
         icon: <FaBeer />,
         title: "strongest beer",
         info:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum."
-      }
-    ]
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, eum.",
+      },
+    ],
   };
   render() {
     return (

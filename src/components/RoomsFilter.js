@@ -79,7 +79,6 @@ const RoomsFilter = ({ rooms }) => {
             value={capacity}
             className="form-control"
             onChange={handleChange}
-            className="size-input"
           >
             {people}
           </select>
