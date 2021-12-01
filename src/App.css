@@ -524,3 +524,20 @@ h6 {
 .drpclass {
   text-transform: capitalize;
 }
+
+/* Whatsapp css */
+.whatsapp-click {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+.whatsapp-click img {
+  height: 60px;
+  width: 60px;
+}
+@media only screen and (max-width: 600px) {
+  .whatsapp-click img {
+    height: 30px;
+    width: 30px;
+  }
+}

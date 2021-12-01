@@ -6,6 +6,7 @@ import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/Error";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import WhatsappClick from "./components/WhatsappClick";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/rooms/:slug" component={SingleRoom} />
         <Route component={Error} />
       </Switch>
+      <WhatsappClick />
     </Fragment>
   );
 }
